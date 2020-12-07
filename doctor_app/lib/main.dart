@@ -1,18 +1,35 @@
+import 'package:doctor_app/pages/mobile_login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(HomePage());
+  runApp(App());
 }
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
+class App extends StatelessWidget {
 
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      theme: ThemeData(
+        primaryColor:  const Color(0xff015ecb) ,
+        primaryColorDark:const Color(0xff2F579F) ,
+        accentColor: const Color(0xffab206),
+        fontFamily: 'Georgia',
+        textTheme: TextTheme(
+            headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+            headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+            bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+        ),
+
+      ),
+      home: MobileLoginPage(),
+    );
   }
+
 }
 
+class AppThemeData extends ThemeData {
+    factory AppThemeData() {
+
+    }
+}
